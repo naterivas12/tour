@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - EcoTurismo Perú</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Barra de navegación accesible -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top" role="navigation" aria-label="Menú principal">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" aria-label="Inicio">
+                <i class="fas fa-leaf me-2" aria-hidden="true"></i>EcoTurismo Perú
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Mostrar menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinos.html">Destinos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contacto.html" aria-current="page">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cabecera de la página -->
+    <header class="bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4">Contáctanos</h1>
+                    <p class="lead">Estamos aquí para ayudarte a planificar tu próxima aventura ecoturística</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección principal de contacto -->
+    <section class="container my-5">
+        <div class="row">
+            <!-- Información de contacto -->
+            <div class="col-lg-5 mb-4 mb-lg-0">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h2 class="h4 mb-4">Información de contacto</h2>
+                        <div class="d-flex mb-3">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-map-marker-alt fa-2x text-primary" aria-hidden="true"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h3 class="h6">Dirección</h3>
+                                <address class="mb-0">
+                                    Av. Arequipa 123<br>
+                                    Miraflores<br>
+                                    Lima, Perú
+                                </address>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-phone fa-2x text-primary" aria-hidden="true"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h3 class="h6">Teléfono</h3>
+                                <p class="mb-0">+51 1 234 5678</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-envelope fa-2x text-primary" aria-hidden="true"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h3 class="h6">Correo electrónico</h3>
+                                <p class="mb-0">info@ecoturismoperu.com</p>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-clock fa-2x text-primary" aria-hidden="true"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h3 class="h6">Horario de atención</h3>
+                                <p class="mb-0">Lunes a Viernes: 9:00 - 18:00<br>Sábados: 10:00 - 14:00</p>
+                            </div>
+                        </div>
+                        
+                        <hr class="my-4">
+                        
+                        <h3 class="h5 mb-3">Síguenos en redes sociales</h3>
+                        <div class="social-links">
+                            <a href="#" class="btn btn-outline-primary me-2" aria-label="Facebook">
+                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline-primary me-2" aria-label="Instagram">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline-primary me-2" aria-label="Twitter">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline-primary" aria-label="YouTube">
+                                <i class="fab fa-youtube" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Formulario de contacto accesible -->
+            <div class="col-lg-7">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h2 class="h4 mb-4">Envíanos un mensaje</h2>
+                        <form id="contactForm" class="needs-validation" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="nombre" class="form-label">Nombre <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="nombre" required aria-describedby="nombreHelp">
+                                    <div class="invalid-feedback">
+                                        Por favor, introduce tu nombre.
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="apellido" class="form-label">Apellido <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="apellido" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, introduce tu apellido.
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Correo electrónico <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="email" required aria-describedby="emailHelp">
+                                    <div class="invalid-feedback">
+                                        Por favor, introduce un correo electrónico válido.
+                                    </div>
+                                    <div id="emailHelp" class="form-text">No compartiremos tu correo con nadie más.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="telefono" class="form-label">Teléfono</label>
+                                    <input type="tel" class="form-control" id="telefono" pattern="[0-9]{10}" aria-describedby="telefonoHelp">
+                                    <div class="invalid-feedback">
+                                        Por favor, introduce un número de teléfono válido (10 dígitos).
+                                    </div>
+                                    <div id="telefonoHelp" class="form-text">Formato: 10 dígitos sin espacios.</div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="asunto" class="form-label">Asunto <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="asunto" required aria-describedby="asuntoHelp">
+                                        <option value="" selected disabled>Selecciona una opción</option>
+                                        <option value="informacion">Solicitud de información</option>
+                                        <option value="reservacion">Reservación</option>
+                                        <option value="comentario">Comentario o sugerencia</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Por favor, selecciona un asunto.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="mensaje" class="form-label">Mensaje <span class="text-danger">*</span></label>
+                                    <textarea class="form-control" id="mensaje" rows="5" required aria-describedby="mensajeHelp"></textarea>
+                                    <div class="invalid-feedback">
+                                        Por favor, escribe tu mensaje.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="privacidadCheck" required>
+                                        <label class="form-check-label" for="privacidadCheck">
+                                            Acepto la <a href="#">política de privacidad</a> y el tratamiento de mis datos personales <span class="text-danger">*</span>
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            Debes aceptar la política de privacidad para continuar.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                                    <button type="reset" class="btn btn-outline-secondary">Limpiar formulario</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de mapa -->
+    <section class="container my-5">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h2 class="h4 mb-4">Encuéntranos</h2>
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.664912953913!2d-77.03805548518764!3d-12.0725685914583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8199ea33425%3A0xf5e57ab0df5a5fce!2sAv.%20Arequipa%2C%20Miraflores%2015074%2C%20Per%C3%BA!5e0!3m2!1ses!2spe!4v1625678901234!5m2!1ses!2spe" 
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade" title="Ubicación de nuestras oficinas en Lima, Perú"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de preguntas frecuentes -->
+    <section class="container my-5">
+        <h2 class="h3 mb-4 text-center">Preguntas frecuentes</h2>
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="accordion" id="accordionFAQ">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                ¿Qué es el ecoturismo?
+                            </button>
+                        </h3>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                El ecoturismo es una forma de turismo responsable que se enfoca en visitar áreas naturales conservando el medio ambiente y mejorando el bienestar de las comunidades locales. Se caracteriza por minimizar los impactos negativos en los ecosistemas, contribuir a la conservación de la biodiversidad y generar beneficios económicos para las comunidades anfitrionas.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                ¿Cómo puedo reservar un tour?
+                            </button>
+                        </h3>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                Puedes reservar un tour de varias maneras: completando el formulario de contacto en esta página, llamándonos directamente al +51 1 234 5678, o enviándonos un correo electrónico a info@ecoturismoperu.com. Te responderemos en un plazo máximo de 24 horas con la disponibilidad y los detalles para confirmar tu reserva.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                ¿Qué debo llevar a un tour de ecoturismo?
+                            </button>
+                        </h3>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                Recomendamos llevar: ropa cómoda y adecuada para el clima, calzado para caminatas, protector solar biodegradable, repelente de insectos natural, sombrero o gorra, botella de agua reutilizable, cámara fotográfica, binoculares (para observación de aves), y una pequeña mochila. Dependiendo del destino específico, te proporcionaremos una lista detallada al momento de tu reserva.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                ¿Los tours son accesibles para personas con movilidad reducida?
+                            </button>
+                        </h3>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                Algunos de nuestros tours están adaptados para personas con movilidad reducida. Te recomendamos contactarnos directamente para discutir tus necesidades específicas y podamos recomendarte las opciones más adecuadas. Trabajamos constantemente para hacer nuestros servicios más accesibles e inclusivos.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h3 class="h5 mb-3">EcoTurismo Perú</h3>
+                    <p>Promoviendo un turismo responsable y sostenible en Perú desde 2010.</p>
+                    <ul class="list-inline social-links">
+                        <li class="list-inline-item">
+                            <a href="#" class="text-white" aria-label="Facebook">
+                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="text-white" aria-label="Instagram">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="text-white" aria-label="Twitter">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h3 class="h5 mb-3">Enlaces rápidos</h3>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html" class="text-white">Inicio</a></li>
+                        <li><a href="destinos.html" class="text-white">Destinos</a></li>
+                        <li><a href="contacto.html" class="text-white">Contacto</a></li>
+                        <li><a href="#" class="text-white">Política de privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="h5 mb-3">Contacto</h3>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt me-2" aria-hidden="true"></i> Av. Arequipa 123, Lima, Perú</p>
+                        <p><i class="fas fa-phone me-2" aria-hidden="true"></i> +51 1 234 5678</p>
+                        <p><i class="fas fa-envelope me-2" aria-hidden="true"></i> info@ecoturismoperu.com</p>
+                    </address>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 EcoTurismo Perú. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript personalizado -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>

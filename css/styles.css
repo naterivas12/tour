@@ -1,0 +1,431 @@
+/* 
+* EcoTurismo México - Estilos principales
+* Enfoque Mobile First con diseño responsivo
+*/
+
+/* Variables CSS para consistencia en colores y facilitar cambios */
+:root {
+    --primary-color: #2e7d32;      /* Verde principal */
+    --primary-dark: #005005;       /* Verde oscuro */
+    --primary-light: #60ad5e;      /* Verde claro */
+    --secondary-color: #1565c0;    /* Azul secundario */
+    --accent-color: #ff8f00;       /* Naranja acento */
+    --text-dark: #212121;          /* Texto oscuro */
+    --text-light: #f5f5f5;         /* Texto claro */
+    --bg-light: #f8f9fa;           /* Fondo claro */
+    --bg-dark: #343a40;            /* Fondo oscuro */
+    --border-radius: 0.375rem;     /* Radio de borde consistente */
+    --transition-speed: 0.3s;      /* Velocidad de transición estándar */
+}
+
+/* Estilos generales y reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+/* Sobrescribir colores de Bootstrap para mantener consistencia */
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Mejoras de accesibilidad */
+:focus {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+/* Estilos de navegación */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.nav-link {
+    position: relative;
+    transition: color var(--transition-speed);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--text-light);
+    transition: all var(--transition-speed);
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 70%;
+}
+
+/* Estilos del hero y carrusel */
+.hero-section {
+    position: relative;
+}
+
+.carousel-item {
+    height: 60vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    filter: brightness(0.7);
+}
+
+.carousel-caption {
+    bottom: 20%;
+    z-index: 10;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Mejora para dispositivos móviles */
+@media (max-width: 767.98px) {
+    .carousel-caption {
+        display: block !important;
+        bottom: 10%;
+        padding: 10px;
+    }
+    
+    .carousel-caption h1, .carousel-caption h2 {
+        font-size: 1.5rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .carousel-item {
+        height: 50vh;
+    }
+}
+
+/* Estilos de secciones */
+.section-title {
+    position: relative;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+/* Tarjetas de destinos */
+.destination-card {
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    border: none;
+    overflow: hidden;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.destination-card img {
+    height: 200px;
+    object-fit: cover;
+    transition: transform var(--transition-speed);
+}
+
+.destination-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Estilos para testimonios */
+.testimonial-item {
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius);
+}
+
+.testimonial-text {
+    font-style: italic;
+    position: relative;
+    padding: 0 20px;
+}
+
+.testimonial-text::before,
+.testimonial-text::after {
+    content: '"';
+    font-size: 1.5rem;
+    color: var(--primary-light);
+}
+
+/* Estilos para formularios */
+.form-control:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 0.2rem rgba(46, 125, 50, 0.25);
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: var(--bg-dark);
+}
+
+.footer-links a {
+    display: block;
+    padding: 0.25rem 0;
+    transition: transform var(--transition-speed);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    transform: translateX(5px);
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color var(--transition-speed);
+    margin-right: 0.5rem;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Estilos para la página de destinos */
+.badge {
+    font-weight: 500;
+    padding: 0.5em 0.75em;
+}
+
+/* Estilos para la página de contacto */
+.contact-info-item {
+    margin-bottom: 1.5rem;
+}
+
+/* Estilos para el acordeón de preguntas frecuentes */
+.accordion-button:not(.collapsed) {
+    background-color: rgba(46, 125, 50, 0.1);
+    color: var(--primary-dark);
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(46, 125, 50, 0.25);
+}
+
+/* Mejoras de contraste para accesibilidad */
+.text-muted {
+    color: #6c757d !important;
+}
+
+/* Media queries para diseño responsivo */
+/* Tablets */
+@media (min-width: 768px) {
+    .carousel-item {
+        height: 65vh;
+    }
+    
+    .carousel-caption {
+        bottom: 25%;
+    }
+}
+
+/* Escritorios */
+@media (min-width: 992px) {
+    .carousel-item {
+        height: 70vh;
+    }
+    
+    .carousel-caption {
+        bottom: 30%;
+    }
+    
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Animaciones sutiles */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+/* Clases de utilidad */
+.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Estilos para imágenes y figuras */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos para el botón de volver arriba */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    z-index: 99;
+    transition: background-color var(--transition-speed);
+}
+
+.back-to-top:hover {
+    background-color: var(--primary-dark);
+}
+
+.back-to-top i {
+    line-height: 40px;
+}
+
+/* Estilos para el estado de carga */
+.loading {
+    position: relative;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Mejoras de alto contraste para accesibilidad */
+@media (prefers-contrast: more) {
+    :root {
+        --primary-color: #006400;
+        --primary-dark: #004d00;
+        --text-dark: #000000;
+        --text-light: #ffffff;
+    }
+    
+    .text-muted {
+        color: #444444 !important;
+    }
+    
+    a {
+        text-decoration: underline;
+    }
+}
+
+/* Soporte para modo oscuro */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-dark: #f5f5f5;
+        --text-light: #212121;
+        --bg-light: #343a40;
+        --bg-dark: #212529;
+    }
+    
+    body {
+        background-color: #212529;
+        color: var(--text-dark);
+    }
+    
+    .card {
+        background-color: #a3a3a3;
+        border-color: #030303;
+    }
+    
+    .bg-light {
+        background-color: #343a40 !important;
+    }
+    
+    .text-muted {
+        color: #adb5bd !important;
+    }
+}

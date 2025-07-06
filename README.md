@@ -1,7 +1,7 @@
-# EcoTurismo México - Proyecto Web
+# EcoTurismo Perú - Proyecto Web
 
 ## Descripción
-Este proyecto consiste en un sitio web para una empresa de ecoturismo en México, desarrollado con HTML, CSS y JavaScript. El sitio web tiene un enfoque Mobile First y utiliza Bootstrap para la maquetación y componentes interactivos.
+Este proyecto consiste en un sitio web para una empresa de ecoturismo en Perú, desarrollado con HTML, CSS y JavaScript. El sitio web tiene un enfoque Mobile First y utiliza Bootstrap para la maquetación y componentes interactivos.
 
 ## Estructura del Proyecto
 - **index.html**: Página principal del sitio web.
